@@ -32,8 +32,12 @@
             <thead>
                 <tr>
                     <th>Tên Điện Thoại</th>
+                    <th>Cấu Hình</th>
                     <th>Giá Bán</th>
-                    <th>Khuyến Mãi</th>
+                    <th>Phụ Kiện</th>
+                    <th>Tình Trạng</th>
+                    <th>Xuất Xứ</th>
+                    <th>Bảo Hành</th>
                 </tr>
             </thead>
             <tbody id="phone-list">
@@ -45,5 +49,23 @@
     <footer>&copy; 2025 Lucky Shop - Liên hệ: 0971.555.838</footer>
 
     <script src="phones.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const phoneList = document.getElementById("phone-list");
+            phones.forEach(phone => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${phone["Tên máy"] || ""}</td>
+                    <td>${phone["Cấu hình"] || ""}</td>
+                    <td>${phone["Giá"] || ""}</td>
+                    <td>${phone["Phụ kiện"] || ""}</td>
+                    <td>${phone["Tình trạng"] || ""}</td>
+                    <td>${phone["Xuất xứ"] || ""}</td>
+                    <td>${phone["Bảo hành"] || ""}</td>
+                `;
+                phoneList.appendChild(row);
+            });
+        });
+    </script>
 </body>
 </html>
