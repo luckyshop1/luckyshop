@@ -28,7 +28,7 @@ const phones = [
     },
     {
         "Tên máy": "Xperia 10 mark VI",
-        "Cấu hình": "Không có thông tin",
+        "Cấu hình": "16GB/256GB",
         "Giá": "8.990.000",
         "Phụ kiện": "Fb",
         "Tình trạng": "Newseal",
