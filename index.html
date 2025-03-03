@@ -57,11 +57,11 @@
                 row.innerHTML = `
                     <td>${phone["Tên máy"] || ""}</td>
                     <td>${phone["Cấu hình"] || ""}</td>
-                    <td>${phone["Giá"] || ""}</td>
+                    <td>${(phone["Giá"] ? phone["Giá"].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") : "") + " VNĐ"}</td>
                     <td>${phone["Phụ kiện"] || ""}</td>
                     <td>${phone["Tình trạng"] || ""}</td>
                     <td>${phone["Xuất xứ"] || ""}</td>
-                    <td>${phone["Bảo hành"] || ""}</td>
+                    <td>${phone["Bảo hành"] ? phone["Bảo hành"] : "Không bảo hành"}</td>
                 `;
                 phoneList.appendChild(row);
             });
